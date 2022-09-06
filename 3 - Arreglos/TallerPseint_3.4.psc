@@ -1,6 +1,26 @@
-Proceso sin_titulo
+SubProceso mostrar_arreglo ( matriz )
+	
 	Definir indice, fila, colum Como Entero;
 	
+	Para colum <- 0 Hasta 1 Con Paso 1 Hacer
+		Para fila <- 0 Hasta 4 Con Paso 1 Hacer
+			Escribir Sin Saltar " ", matriz[colum,fila];
+		FinPara
+		
+		Escribir " ";
+		
+		Para fila <- 9 Hasta 5 Con Paso -1 Hacer
+			Escribir Sin Saltar " ", matriz[colum,fila]; 
+		FinPara
+		
+		Escribir " ";
+	FinPara
+	
+	Escribir " ";	
+FinSubProceso
+
+Proceso sin_titulo
+		
 	Definir matriz Como Caracter;
 	Dimension matriz[2,10];
 	
@@ -25,19 +45,6 @@ Proceso sin_titulo
 	matriz[1,8] <- "19";
 	matriz[1,9] <- "20";
 	
-	Para colum <- 0 Hasta 1 Con Paso 1 Hacer
-		Para fila <- 0 Hasta 4 Con Paso 1 Hacer
-			Escribir Sin Saltar " ", matriz[colum,fila];
-		FinPara
-		
-		Escribir " ";
-		
-		Para fila <- 9 Hasta 5 Con Paso -1 Hacer
-			Escribir Sin Saltar " ", matriz[colum,fila]; 
-		FinPara
-		
-		Escribir " ";
-	FinPara
+	mostrar_arreglo( matriz );
 	
-	Escribir " ";	
 FinProceso

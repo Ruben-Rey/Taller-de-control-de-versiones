@@ -1,16 +1,15 @@
-Proceso sin_titulo
+SubProceso numeros_primos()
 	
 	Definir inputFinal, number,contador, x, i Como Entero;
 	inputFinal <- 1000;
 	contador <- 0;
-	
 	
 	Para i <- 2 Hasta inputFinal Con Paso 1 Hacer
 		
 		x <- i;
 		number <- 1;
 		contador <- 0;
-	
+		
 		Mientras number <= i Hacer
 			
 			SI i MOD number = 0 Entonces
@@ -23,11 +22,11 @@ Proceso sin_titulo
 		
 		SI contador = 2 Entonces
 			Escribir "Es numero primo :", i;
-		FinSi
-		
-		
-		
+		FinSi		
 	FinPara
 	
-	
+FinSubProceso
+
+Proceso sin_titulo
+	numeros_primos();
 FinProceso
